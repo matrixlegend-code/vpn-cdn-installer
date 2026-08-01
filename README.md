@@ -134,7 +134,9 @@ Relay-сервер в России принимает трафик от CDN и �
 
 ### Часть 2 — Обзор новой версии
 
-> 📹 **Скоро!** Подробный обзор всех нововведений v2.0
+[![Обзор VPN CDN Installer v2](https://img.youtube.com/vi/wqWE2s0ge9I/maxresdefault.jpg)](https://youtu.be/wqWE2s0ge9I)
+
+🎥 [Смотреть на YouTube](https://youtu.be/wqWE2s0ge9I)
 
 ---
 
