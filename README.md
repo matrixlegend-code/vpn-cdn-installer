@@ -90,7 +90,7 @@ CDN → один VPS: панель + origin + Xray
 - подходит, когда требуется шифрование на участке CDN → origin;
 - поддерживается работа через отдельную ноду.
 
-### TurboFlare
+### TurboFlare CDN
 
 - origin работает по HTTPS на порту 443;
 - используется отдельный XHTTP-путь `/static/getFile/video/segment.ts`;
@@ -134,10 +134,10 @@ CDN → один VPS: панель + origin + Xray
 |---|---|---|---|
 | **VK Cloud** | HTTP | Домен origin | Высокая скорость и поддержка каскада |
 | **Yandex Cloud** | HTTPS | Домен origin | TLS между CDN и сервером |
-| **TurboFlare** | HTTPS `:443` | Домен с делегированием NS | Управление DNS-зоной и сертификатом на стороне TurboFlare |
+| **TurboFlare CDN** | HTTPS `:443` | Домен с делегированием NS | Управление DNS-зоной и сертификатом на стороне TurboFlare |
 | **Beeline CDNvideo** | HTTP/HTTPS | Выданный CDN-домен | Отдельный профиль провайдера |
 | **Timeweb** | HTTP `:80` | IP-адрес сервера | Простая схема origin и технический CNAME |
-| **Selectel** | HTTPS `:443` | Домен origin | Технический `*.selcdn.net`, таймауты и методы DELETE/POST |
+| **Selectel CDN** | HTTPS `:443` | Домен origin | Технический `*.selcdn.net`, таймауты и методы DELETE/POST |
 
 ## Что появилось в v3.0
 
