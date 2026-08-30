@@ -4,7 +4,7 @@
 
 Автоматическое развёртывание VLESS XHTTP Packet-Up через CDN.
 
-**Remnawave · 3x-ui · VK Cloud · Yandex Cloud · Beeline CDNvideo · Timeweb CDN**
+**Remnawave · 3x-ui · VK Cloud · Yandex Cloud · TurboFlare · Beeline CDNvideo · Timeweb CDN · Selectel CDN**
 
 [Купить](https://t.me/cdnsettingvpn_bot) · [Отзывы и новости](https://t.me/NcloloOtziv) · [Поддержка](https://t.me/Nclolo)
 
@@ -90,6 +90,15 @@ CDN → один VPS: панель + origin + Xray
 - подходит, когда требуется шифрование на участке CDN → origin;
 - поддерживается работа через отдельную ноду.
 
+### TurboFlare
+
+- origin работает по HTTPS на порту 443;
+- используется отдельный XHTTP-путь `/static/getFile/video/segment.ts`;
+- TurboFlare управляет всей DNS-зоной домена через собственные NS-серверы;
+- сертификат для edge выпускает сам TurboFlare;
+- отдельный режим 4 помогает перенести существующий домен и проверить делегирование NS;
+- перед сменой NS необходимо перенести в TurboFlare остальные DNS-записи зоны.
+
 ### Beeline CDNvideo
 
 - используется домен, выданный CDNvideo;
@@ -109,20 +118,32 @@ CDN → один VPS: панель + origin + Xray
 
 После установки скрипт показывает конкретный IP origin, CDN-домен, DNS-запись и настройки ресурса Timeweb.
 
+### Selectel CDN
+
+- создаётся ресурс типа «Статика» с HTTPS origin на порту 443;
+- CDN выдаёт технический домен вида `xxxx.selcdn.net`;
+- для длинных XHTTP-потоков увеличиваются таймауты соединения и ответа;
+- кеширование, оптимизация изображений, Brotli и Gzip выключаются;
+- дополнительно разрешаются методы DELETE и POST, основной uplink использует DELETE;
+- используется отдельный XHTTP-путь `/api/uploadFile/`;
+- персональный домен не должен совпадать с доменом origin, иначе возникает цикл запросов.
+
 ## Сравнение CDN
 
 | CDN | Соединение до origin | Источник | Основное отличие |
 |---|---|---|---|
 | **VK Cloud** | HTTP | Домен origin | Высокая скорость и поддержка каскада |
 | **Yandex Cloud** | HTTPS | Домен origin | TLS между CDN и сервером |
+| **TurboFlare** | HTTPS `:443` | Домен с делегированием NS | Управление DNS-зоной и сертификатом на стороне TurboFlare |
 | **Beeline CDNvideo** | HTTP/HTTPS | Выданный CDN-домен | Отдельный профиль провайдера |
 | **Timeweb** | HTTP `:80` | IP-адрес сервера | Простая схема origin и технический CNAME |
+| **Selectel** | HTTPS `:443` | Домен origin | Технический `*.selcdn.net`, таймауты и методы DELETE/POST |
 
 ## Что появилось в v3.0
 
 - обновлённая установка 3x-ui 3.7.0;
 - актуальные сценарии Remnawave;
-- отдельная корректная инструкция для Timeweb CDN;
+- отдельные пошаговые инструкции для Timeweb, TurboFlare и Selectel CDN;
 - улучшенные XHTTP Packet-Up профили провайдеров;
 - поддержка новой установки, удалённой ноды и существующей панели;
 - автоматическая настройка подписок для Remnawave и 3x-ui;
