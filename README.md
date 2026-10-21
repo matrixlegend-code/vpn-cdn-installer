@@ -6,7 +6,7 @@
 
 **Remnawave · 3x-ui · VK Cloud · Yandex Cloud · TurboFlare · Beeline CDNvideo · Timeweb CDN · Selectel CDN**
 
-[Купить](https://t.me/cdnsettingvpn_bot) · [Отзывы и новости](https://t.me/NcloloOtziv) · [Поддержка](https://t.me/Nclolo)
+
 
 </div>
 
@@ -176,23 +176,4 @@ CDN → один VPS: панель + origin + Xray
 | Удалённая нода | Второй VPS и SSH-доступ |
 | Каскад | Дополнительный relay-сервер |
 
-## Как получить скрипт
-
-Скрипт приобретается и выдаётся через [@cdnsettingvpn_bot](https://t.me/cdnsettingvpn_bot). Бот показывает актуальную команду запуска. После запуска установщик предлагает выбрать режим, панель и CDN-провайдера, затем пошагово выполняет настройку.
-
-## Видео
-
-- [Первый обзор VPN CDN Installer](https://youtu.be/m4ploAik_aI)
-- [Обзор обновлённой версии](https://youtu.be/wqWE2s0ge9I)
-
-Интерфейс в старых видео может отличаться от текущей версии v3.0.
-
-## Контакты
-
-- покупка: [@cdnsettingvpn_bot](https://t.me/cdnsettingvpn_bot);
-- поддержка: [@Nclolo](https://t.me/Nclolo);
-- отзывы и новости: [@NcloloOtziv](https://t.me/NcloloOtziv).
-
----
-
-© 2025-2026 Nclolo. Все права защищены.
+© 2025-2026 Все права защищены.
